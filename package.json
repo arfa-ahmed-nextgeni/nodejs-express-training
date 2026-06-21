@@ -1,0 +1,32 @@
+{
+  "name": "nodejs-express-training",
+  "version": "1.0.0",
+  "description": "Topic-wise practice repository for Node.js and Express.js training.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev:fundamentals": "tsx 01-express-fundamentals/src/index.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arfa-ahmed-nextgeni/nodejs-express-training.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/arfa-ahmed-nextgeni/nodejs-express-training/issues"
+  },
+  "homepage": "https://github.com/arfa-ahmed-nextgeni/nodejs-express-training#readme",
+  "dependencies": {
+    "express": "^5.2.1"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.6",
+    "@types/node": "^26.0.0",
+    "tsx": "^4.22.4",
+    "typescript": "^6.0.3"
+  }
+}
