@@ -18,6 +18,6 @@ Node.js is a runtime environment that lets us run JavaScript on the server side.
 - To build tools, scripts, and server-side applications
 - To use the same language on frontend and backend
 
-## Lead-style Answer
+## Summary
 
 Node.js is a JavaScript runtime built on the V8 engine. It allows us to run JavaScript outside the browser, mostly for backend APIs, servers, scripts, and real-time applications.
