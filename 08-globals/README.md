@@ -52,6 +52,7 @@ console.log(__filename);
 console.log("Hello from Node.js");
 console.log(process.version);
 console.log(process.cwd());
+console.log(process.env.NODE_ENV);
 
 setTimeout(() => {
   console.log("Runs after 1 second");
@@ -66,16 +67,27 @@ Node.js globals are built-in values and functions available without manual impor
 
 ### Q1. What are globals in Node.js?
 
-Globals are built-in values or functions that can be used directly without importing them.
+Globals are built-in objects and functions that we can use directly in Node.js code without importing them.
 
 ### Q2. What is `process` used for?
 
-`process` provides information and control related to the current Node.js process, such as environment variables, current working directory, and Node.js version.
+`process` gives information and control related to the current Node.js process. For example, we can use it to read environment variables, get the current working directory, check the Node.js version, or read process/memory information.
+
+Examples:
+
+```ts
+console.log(process.env.NODE_ENV);
+console.log(process.cwd());
+console.log(process.version);
+console.log(process.memoryUsage());
+```
 
 ### Q3. What is the difference between `__dirname` and `__filename`?
 
-`__dirname` gives the directory path of the current file. `__filename` gives the full path of the current file.
+`__dirname` gives the directory path of the current file.
 
-### Q4. Are `__dirname` and `__filename` directly available in ES modules?
+`__filename` gives the full path of the current file.
 
-No. In ES modules, they are not available directly. We can recreate them using `import.meta.url`, `fileURLToPath`, and `path.dirname`.
+### Q4. Why does `console.log(__dirname)` not work directly in this project?
+
+Because this project uses ES modules with `"type": "module"`. In ES modules, `__dirname` and `__filename` are not available directly. We can recreate them using `import.meta.url`, `fileURLToPath`, and `path.dirname`.
