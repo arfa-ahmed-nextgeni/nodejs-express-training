@@ -63,16 +63,22 @@ Blocking code stops the main JavaScript thread until the task finishes. Non-bloc
 
 ### Q1. What is blocking code?
 
-Blocking code stops further execution until the current task finishes.
+Blocking code waits for the current task to complete before moving to the next task.
 
 ### Q2. What is non-blocking code?
 
-Non-blocking code allows the program to continue running while the task is still in progress.
+Non-blocking code does not wait for the current task to complete. It starts the task and continues executing the next code.
 
-### Q3. Which one is blocking: `fs.readFileSync` or `fs.readFile`?
+### Q3. Which one is blocking: `fs.readFileSync()` or `fs.readFile()`?
 
-`fs.readFileSync` is blocking. `fs.readFile` is non-blocking.
+`fs.readFileSync()` is blocking because it waits until the file reading task is completed.
 
-### Q4. Why should we avoid blocking code in API handlers?
+`fs.readFile()` is non-blocking because it accepts a callback and continues execution. When the file reading is completed, the callback is called.
 
-Because blocking code keeps the main JavaScript thread busy, so other incoming requests may be delayed or blocked.
+### Q4. What happens if a server runs blocking CPU work for 30 seconds?
+
+Other incoming requests can be blocked or delayed for those 30 seconds because the main JavaScript thread is busy.
+
+### Q5. Why should we avoid blocking code in API handlers?
+
+Because blocking code keeps the main JavaScript thread busy, so other incoming requests may be delayed, blocked, or timed out.
