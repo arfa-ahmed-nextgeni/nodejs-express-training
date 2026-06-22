@@ -98,16 +98,20 @@ Modules help us organize and reuse code. CommonJS uses `require` and `module.exp
 
 ### Q1. What is a module?
 
-A module is a separate reusable file that can export code and allow other files to import and use it.
+A module is a reusable file that exports variables, functions, classes, or objects so they can be used when needed in other files.
 
 ### Q2. Why do we use modules?
 
-We use modules to organize code, reuse code, and avoid writing everything in one large file.
+We use modules to better organize code, reuse code, and avoid writing everything in one large file.
 
 ### Q3. What is the difference between CommonJS and ES Modules?
 
-CommonJS uses `require` and `module.exports`. ES Modules use `import` and `export`.
+CommonJS is the older JavaScript module system used in Node.js. It uses `require` and `module.exports`.
+
+ES Modules are the modern JavaScript module system. They use `import` and `export` keywords.
 
 ### Q4. What is the difference between named export and default export?
 
-Named exports are imported using braces. Default exports are imported without braces.
+Named export exports a variable, function, class, or object with a specific name. When importing it, we use the same exported name inside braces.
+
+Default export exports one main value from a file. When importing it, we do not use braces and we can choose any import name.
