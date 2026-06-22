@@ -92,18 +92,28 @@ CommonJS and ES Modules both help us split and reuse code. CommonJS uses `requir
 
 ## Practice Questions
 
-### Q1. What is CommonJS?
+### Q1. What is the difference between CommonJS and ES Modules?
 
-CommonJS is the older Node.js module system that uses `require()` and `module.exports`.
+CommonJS is the older JavaScript module system used in Node.js. It uses `require()` and `module.exports`.
 
-### Q2. What are ES Modules?
+ES Modules are the modern JavaScript module system. They use `import` and `export`.
 
-ES Modules are the modern JavaScript module system that uses `import` and `export`.
-
-### Q3. What does `"type": "module"` do in `package.json`?
+### Q2. What does `"type": "module"` do in `package.json`?
 
 It tells Node.js to treat `.js` files as ES Modules.
 
-### Q4. Which module system is commonly used in modern TypeScript, React, and Next.js projects?
+### Q3. Why does `console.log(__dirname)` not work directly in this project?
+
+Because this project uses ES Modules, and `__dirname` is not directly available in ES Modules.
+
+### Q4. Which module system uses `require()` and `module.exports`?
+
+CommonJS uses `require()` and `module.exports`.
+
+### Q5. Which module system uses `import` and `export`?
+
+ES Modules use `import` and `export`.
+
+### Q6. Which module system is commonly used in modern TypeScript, React, and Next.js projects?
 
 ES Modules are commonly used in modern TypeScript, React, and Next.js projects.
