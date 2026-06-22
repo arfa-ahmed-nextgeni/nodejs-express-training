@@ -56,12 +56,38 @@ Node.js uses V8 to execute JavaScript and libuv to handle asynchronous operation
 
 ### Q1. What is the role of V8 in Node.js?
 
-V8 executes JavaScript code in Node.js.
+V8 is the JavaScript engine that executes JavaScript code in Node.js.
 
 ### Q2. What is the role of libuv in Node.js?
 
-libuv helps Node.js handle asynchronous operations like timers, file system work, networking, and the event loop.
+libuv handles asynchronous operations and manages the event loop.
 
-### Q3. Why does `setTimeout(..., 0)` run after synchronous code?
+### Q3. What is the role of the Event Loop?
 
-Because its callback waits in the queue and only runs when the call stack becomes empty.
+The event loop moves completed callbacks back to the call stack when the call stack is empty.
+
+### Q4. What is the role of the Call Stack?
+
+The call stack runs JavaScript code line by line synchronously.
+
+### Q5. What is the output of this code?
+
+```ts
+console.log("A");
+
+setTimeout(() => {
+  console.log("B");
+}, 0);
+
+console.log("C");
+```
+
+Output:
+
+```txt
+A
+C
+B
+```
+
+`setTimeout` is asynchronous. Its callback is handled outside the call stack and waits in the callback queue. When the call stack becomes empty, the event loop moves the callback back to the call stack and it executes.
