@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "dev:syntax": "tsx 02-node-js-syntax/src/index.ts"
   },
   "repository": {
     "type": "git",

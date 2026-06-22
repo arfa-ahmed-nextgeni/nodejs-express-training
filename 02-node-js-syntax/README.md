@@ -19,7 +19,7 @@ Node.js syntax means writing JavaScript code that runs in the Node.js runtime in
 ## Example
 
 ```ts
-const name = "Arfa";
+const name = "Ahmed";
 const role = "Frontend Engineer";
 
 function introduceUser(userName: string, userRole: string) {
