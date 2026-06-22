@@ -55,8 +55,12 @@ It means JavaScript code runs on one main thread.
 
 ### Q2. If Node.js is single-threaded, how can it handle many requests?
 
-Because slow asynchronous I/O work is handled outside the main JavaScript thread, and the event loop executes callbacks when the call stack is free.
+Because Node.js forwards async I/O operations to Node APIs/libuv, so the main JavaScript thread does not wait for them and can continue handling other work.
 
 ### Q3. What type of work can block Node.js?
 
 Long-running synchronous or CPU-heavy work can block the main thread.
+
+### Q4. What happens if an API handler runs CPU-heavy synchronous work for 30 seconds?
+
+Other incoming requests can be blocked or delayed for those 30 seconds because the main JavaScript thread is busy and cannot handle them until the blocking work finishes.
