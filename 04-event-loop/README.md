@@ -44,14 +44,38 @@ The event loop is an important part of Node.js. It helps Node.js execute asynchr
 
 ## Practice Questions
 
-### Q1. What is the event loop?
+### Q1. What is the difference between Call Stack, Callback Queue, and Event Loop?
 
-The event loop is a mechanism that checks whether the call stack is empty and then moves ready callbacks from the queue to the call stack.
+- **Call Stack**: Stores and runs JavaScript code line by line synchronously.
+- **Callback Queue**: Stores completed async callbacks that are ready to run.
+- **Event Loop**: Checks if the call stack is empty and moves ready callbacks from the callback queue to the call stack.
 
-### Q2. Does `setTimeout(..., 0)` run immediately?
+### Q2. What is the output of this code?
 
-No. It runs after the current synchronous code finishes and the call stack becomes empty.
+```ts
+console.log(1);
 
-### Q3. Why is the event loop important in Node.js?
+setTimeout(() => {
+  console.log(2);
+}, 1000);
+
+console.log(3);
+```
+
+Output:
+
+```txt
+1
+3
+2
+```
+
+First, `1` is printed. Then `setTimeout` is registered as an async timer. JavaScript continues and prints `3`. After around 1 second, the timer callback is ready. When the call stack is empty, the event loop moves the callback to the call stack and `2` is printed.
+
+### Q3. Why does `setTimeout(..., 0)` not execute immediately?
+
+Because `setTimeout` is asynchronous. Its callback must wait in the callback queue and can only run when the call stack becomes empty.
+
+### Q4. Why is the event loop important in Node.js?
 
 It allows Node.js to handle asynchronous operations efficiently without blocking the main JavaScript thread.
