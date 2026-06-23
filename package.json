@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "typecheck": "tsc --noEmit",
-    "dev:syntax": "tsx 02-node-js-syntax/src/index.ts"
+    "dev:syntax": "tsx 02-node-js-syntax/src/index.ts",
+    "dev:setup": "tsx 12-installation-and-setup/src/index.ts"
   },
   "repository": {
     "type": "git",
