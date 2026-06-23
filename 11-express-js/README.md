@@ -53,16 +53,22 @@ Express.js is a minimal and flexible Node.js framework used to build APIs and we
 
 ### Q1. What is Express.js?
 
-Express.js is a lightweight Node.js framework used to build APIs and web servers.
+Express.js is a Node.js framework used to build web APIs and web servers using built-in helper functions with minimal code.
 
-### Q2. Why do we use Express.js?
+### Q2. Why do we use Express.js instead of only the Node.js `http` module?
 
-We use Express.js because it makes routing, request handling, response handling, middleware, and error handling easier.
+With the native Node.js `http` module, we need to write more manual code for routing, request handling, and response handling. Express provides built-in helpers, so we can build the same API with less code and cleaner structure.
 
-### Q3. Can we build a server without Express.js?
+### Q3. What is the difference between Node.js and Express.js?
 
-Yes. Node.js has a built-in `http` module, but Express makes server and API development easier and cleaner.
+Node.js is a JavaScript runtime that allows JavaScript to run outside the browser.
 
-### Q4. Is Express.js a separate runtime like Node.js?
+Express.js is a framework that runs on top of Node.js and helps us build APIs and web servers more easily.
+
+### Q4. Can we build a server without Express.js?
+
+Yes. We can build a server using the built-in Node.js `http` module. But without Express, the code is usually longer, more manual, and harder to maintain.
+
+### Q5. Is Express.js a separate runtime like Node.js?
 
 No. Express.js is not a runtime. It is a framework that runs on top of Node.js.
