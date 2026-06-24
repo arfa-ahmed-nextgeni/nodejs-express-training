@@ -1,5 +1,7 @@
 import express from "express";
 
+const PORT = 3004;
+
 const app = express();
 
 app.get("/users", (req, res) => {
@@ -19,6 +21,6 @@ app.get("/products", (req, res) => {
   res.send("List of products.");
 });
 
-app.listen(3000, () => {
-  console.log("Server is running on http://localhost:3000");
+app.listen(PORT, () => {
+  console.log(`Server is running on http://localhost:${PORT}`);
 });
