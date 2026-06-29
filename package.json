@@ -10,7 +10,8 @@
     "dev:setup": "tsx 12-installation-and-setup/src/index.ts",
     "dev:hello": "tsx 13-hello-world/src/index.ts",
     "dev:routing": "tsx 15-routing/src/index.ts",
-    "dev:params": "tsx 16-request-parameters/src/index.ts"
+    "dev:params": "tsx 16-request-parameters/src/index.ts",
+    "dev:response": "tsx 17-send-response/src/index.ts"
   },
   "repository": {
     "type": "git",
