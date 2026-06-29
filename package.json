@@ -12,7 +12,8 @@
     "dev:routing": "tsx 15-routing/src/index.ts",
     "dev:params": "tsx 16-request-parameters/src/index.ts",
     "dev:response": "tsx 17-send-response/src/index.ts",
-    "dev:status": "tsx 18-http-status-codes/src/index.ts"
+    "dev:status": "tsx 18-http-status-codes/src/index.ts",
+    "dev:middleware": "tsx 19-middleware/src/index.ts"
   },
   "repository": {
     "type": "git",
