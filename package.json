@@ -9,7 +9,8 @@
     "dev:syntax": "tsx 02-node-js-syntax/src/index.ts",
     "dev:setup": "tsx 12-installation-and-setup/src/index.ts",
     "dev:hello": "tsx 13-hello-world/src/index.ts",
-    "dev:routing": "tsx 15-routing/src/index.ts"
+    "dev:routing": "tsx 15-routing/src/index.ts",
+    "dev:params": "tsx 16-request-parameters/src/index.ts"
   },
   "repository": {
     "type": "git",
