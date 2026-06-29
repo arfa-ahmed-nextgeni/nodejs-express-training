@@ -19,10 +19,10 @@ app.post("/users", (req, res) => {
 });
 
 app.delete("/users/:id", (_req, res) => {
-  res.status(204);
+  res.status(204).send();
 });
 
-app.get("/error", (_req, res) => {
+app.get("/server-error", (_req, res) => {
   res.status(500).send("Internal Server Error");
 });
 
