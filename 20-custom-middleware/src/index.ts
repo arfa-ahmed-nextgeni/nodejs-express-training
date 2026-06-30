@@ -41,7 +41,7 @@ app.post("/login", logger, (_req, res) => {
   res.send("Login successfully")
 })
 
-app.post("/admin", logger, auth, (_req, res) => {
+app.get("/admin", logger, auth, (_req, res) => {
   res.send("Admin Dashboard");
 })
 
