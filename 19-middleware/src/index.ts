@@ -14,7 +14,7 @@ function auth(_req: express.Request, _res: express.Response, next: express.NextF
   next();
 }
 
-app.get("/", auth, (_req, res) => {
+app.get("/", (_req, res) => {
   res.send("Home Page");
 });
 
