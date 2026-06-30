@@ -15,7 +15,8 @@
     "dev:status": "tsx 18-http-status-codes/src/index.ts",
     "dev:middleware": "tsx 19-middleware/src/index.ts",
     "dev:custom-middleware": "tsx 20-custom-middleware/src/index.ts",
-    "dev:third-party-middleware": "tsx 21-third-party-middleware/src/index.ts"
+    "dev:third-party-middleware": "tsx 21-third-party-middleware/src/index.ts",
+    "dev:assets": "tsx 22-assets-in-express/src/index.ts"
   },
   "repository": {
     "type": "git",
