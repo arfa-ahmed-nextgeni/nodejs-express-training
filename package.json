@@ -14,7 +14,8 @@
     "dev:response": "tsx 17-send-response/src/index.ts",
     "dev:status": "tsx 18-http-status-codes/src/index.ts",
     "dev:middleware": "tsx 19-middleware/src/index.ts",
-    "dev:custom-middleware": "tsx 20-custom-middleware/src/index.ts"
+    "dev:custom-middleware": "tsx 20-custom-middleware/src/index.ts",
+    "dev:third-party-middleware": "tsx 21-third-party-middleware/src/index.ts"
   },
   "repository": {
     "type": "git",
@@ -29,10 +30,15 @@
   },
   "homepage": "https://github.com/arfa-ahmed-nextgeni/nodejs-express-training#readme",
   "dependencies": {
-    "express": "^5.2.1"
+    "cors": "^2.8.6",
+    "express": "^5.2.1",
+    "helmet": "^8.2.0",
+    "morgan": "^1.11.0"
   },
   "devDependencies": {
+    "@types/cors": "^2.8.19",
     "@types/express": "^5.0.6",
+    "@types/morgan": "^1.9.10",
     "@types/node": "^26.0.0",
     "tsx": "^4.22.4",
     "typescript": "^6.0.3"
