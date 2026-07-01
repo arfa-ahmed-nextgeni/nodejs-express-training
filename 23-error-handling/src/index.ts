@@ -8,7 +8,7 @@ app.use(express.json());
 
 app.post("/users", (req, res) => {
   if (!req.body.email) {
-    res.status(400).json({ message: "Email is required" });
+    return res.status(400).json({ message: "Email is required" });
   }
   res.status(201).json({ message: "User created" });
 });
