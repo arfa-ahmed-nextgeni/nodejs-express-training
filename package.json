@@ -18,7 +18,8 @@
     "dev:third-party-middleware": "tsx 21-third-party-middleware/src/index.ts",
     "dev:assets": "tsx 22-assets-in-express/src/index.ts",
     "dev:error-handling": "tsx 23-error-handling/src/index.ts",
-    "dev:validation": "tsx 24-validation/src/index.ts"
+    "dev:validation": "tsx 24-validation/src/index.ts",
+    "dev:sanitize": "tsx 25-sanitize-input/src/index.ts"
   },
   "repository": {
     "type": "git",
