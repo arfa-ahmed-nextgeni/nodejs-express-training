@@ -17,8 +17,8 @@ function auth(req: express.Request, res: express.Response, next: express.NextFun
 
   const token = authHeader.split(" ")[1];
 
-  if (token !== "your-secret-token") {
-    return res.status(403).json({ message: "Invalid token" });
+  if (token !== "my-secret-token") {
+    return res.status(401).json({ message: "Unauthorized" });
   }
 
   next();
