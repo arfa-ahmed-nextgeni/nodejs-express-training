@@ -21,7 +21,8 @@
     "dev:validation": "tsx 24-validation/src/index.ts",
     "dev:sanitize": "tsx 25-sanitize-input/src/index.ts",
     "dev:auth": "tsx 26-authentication/src/index.ts",
-    "dev:authorization": "tsx 27-authorization/src/index.ts"
+    "dev:authorization": "tsx 27-authorization/src/index.ts",
+    "dev:hashing": "tsx 28-password-hashing/src/index.ts"
   },
   "repository": {
     "type": "git",
@@ -36,6 +37,7 @@
   },
   "homepage": "https://github.com/arfa-ahmed-nextgeni/nodejs-express-training#readme",
   "dependencies": {
+    "bcrypt": "^6.0.0",
     "cors": "^2.8.6",
     "express": "^5.2.1",
     "helmet": "^8.2.0",
@@ -43,6 +45,7 @@
     "zod": "^4.4.3"
   },
   "devDependencies": {
+    "@types/bcrypt": "^6.0.0",
     "@types/cors": "^2.8.19",
     "@types/express": "^5.0.6",
     "@types/morgan": "^1.9.10",
