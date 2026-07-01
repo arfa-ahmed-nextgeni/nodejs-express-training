@@ -20,7 +20,8 @@
     "dev:error-handling": "tsx 23-error-handling/src/index.ts",
     "dev:validation": "tsx 24-validation/src/index.ts",
     "dev:sanitize": "tsx 25-sanitize-input/src/index.ts",
-    "dev:auth": "tsx 26-authentication/src/index.ts"
+    "dev:auth": "tsx 26-authentication/src/index.ts",
+    "dev:authorization": "tsx 27-authorization/src/index.ts"
   },
   "repository": {
     "type": "git",
