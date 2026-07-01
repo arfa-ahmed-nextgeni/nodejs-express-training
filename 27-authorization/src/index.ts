@@ -1,6 +1,6 @@
 import express from "express";
 
-const POST = 3000;
+const PORT = 3000;
 
 const app = express();
 
@@ -40,6 +40,6 @@ app.get("/admin", requireAdmin, (_req, res) => {
   });
 });
 
-app.listen(POST, () => {
-  console.log(`Server is running on port ${POST}`);
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
 });
