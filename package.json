@@ -23,7 +23,8 @@
     "dev:auth": "tsx 26-authentication/src/index.ts",
     "dev:authorization": "tsx 27-authorization/src/index.ts",
     "dev:hashing": "tsx 28-password-hashing/src/index.ts",
-    "dev:jwt": "tsx 29-jwt/src/index.ts"
+    "dev:jwt": "tsx 29-jwt/src/index.ts",
+    "dev:refresh-token": "tsx 30-refresh-token/src/index.ts"
   },
   "repository": {
     "type": "git",
