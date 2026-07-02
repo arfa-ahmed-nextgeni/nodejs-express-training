@@ -45,7 +45,7 @@ app.post("/login", (req, res) => {
 
   res.json({
     "message": "Login successful",
-    "token": "generated-token"
+    "token": token
   });
 });
 
