@@ -48,7 +48,7 @@ app.post("/login", (req, res) => {
   });
 });
 
-app.post("/refresh-token", (req, res) => {
+app.post("/refresh", (req, res) => {
   const refreshToken = req.body.refreshToken;
 
   if (!refreshToken) {
@@ -64,9 +64,17 @@ app.post("/refresh-token", (req, res) => {
       });
     }
 
-    const payload = { id: 1, email: req.body.email, role: "user" };
+    const decoded = jwt.verify(refreshToken, REFRESH_TOKEN_SECRET) as {
+      id: number;
+      email: string;
+      role: string;
+    };
 
-    const newAccessToken = jwt.sign({ id: payload.id, email: payload.email, role: payload.role }, ACCESS_TOKEN_SECRET, { expiresIn: "15m" });
+    const newAccessToken = jwt.sign(
+      { id: decoded.id, email: decoded.email, role: decoded.role },
+      ACCESS_TOKEN_SECRET,
+      { expiresIn: "15m" }
+    );
 
     res.json({
       "accessToken": newAccessToken
