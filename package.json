@@ -24,7 +24,8 @@
     "dev:authorization": "tsx 27-authorization/src/index.ts",
     "dev:hashing": "tsx 28-password-hashing/src/index.ts",
     "dev:jwt": "tsx 29-jwt/src/index.ts",
-    "dev:refresh-token": "tsx 30-refresh-token/src/index.ts"
+    "dev:refresh-token": "tsx 30-refresh-token/src/index.ts",
+    "dev:cookies": "tsx 31-cookies/src/index.ts"
   },
   "repository": {
     "type": "git",
@@ -40,6 +41,7 @@
   "homepage": "https://github.com/arfa-ahmed-nextgeni/nodejs-express-training#readme",
   "dependencies": {
     "bcrypt": "^6.0.0",
+    "cookie-parser": "^1.4.7",
     "cors": "^2.8.6",
     "express": "^5.2.1",
     "helmet": "^8.2.0",
@@ -49,6 +51,7 @@
   },
   "devDependencies": {
     "@types/bcrypt": "^6.0.0",
+    "@types/cookie-parser": "^1.4.10",
     "@types/cors": "^2.8.19",
     "@types/express": "^5.0.6",
     "@types/jsonwebtoken": "^9.0.10",
