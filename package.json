@@ -22,7 +22,8 @@
     "dev:sanitize": "tsx 25-sanitize-input/src/index.ts",
     "dev:auth": "tsx 26-authentication/src/index.ts",
     "dev:authorization": "tsx 27-authorization/src/index.ts",
-    "dev:hashing": "tsx 28-password-hashing/src/index.ts"
+    "dev:hashing": "tsx 28-password-hashing/src/index.ts",
+    "dev:jwt": "tsx 29-jwt/src/index.ts"
   },
   "repository": {
     "type": "git",
@@ -41,6 +42,7 @@
     "cors": "^2.8.6",
     "express": "^5.2.1",
     "helmet": "^8.2.0",
+    "jsonwebtoken": "^9.0.3",
     "morgan": "^1.11.0",
     "zod": "^4.4.3"
   },
@@ -48,6 +50,7 @@
     "@types/bcrypt": "^6.0.0",
     "@types/cors": "^2.8.19",
     "@types/express": "^5.0.6",
+    "@types/jsonwebtoken": "^9.0.10",
     "@types/morgan": "^1.9.10",
     "@types/node": "^26.0.0",
     "tsx": "^4.22.4",
