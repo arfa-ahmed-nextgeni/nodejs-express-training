@@ -34,16 +34,33 @@ app.post("/create-source-file", async (_req, res) => {
 
 app.post("/copy-file-stream", async (_req, res) => {
   try {
+    await fsPromises.access(sourceFilePath);
+
     const readStream = fs.createReadStream(sourceFilePath);
     const writeStream = fs.createWriteStream(copiedFilePath);
 
     readStream.pipe(writeStream);
-    res.json({
-      "message": "File copied using stream"
+
+    writeStream.on("finish", () => {
+      res.json({
+        message: "File copied using stream"
+      });
     });
-  } catch (error) {
-    res.status(404).json({
-      "message": "Source file not found"
+
+    readStream.on("error", () => {
+      res.status(404).json({
+        message: "Source file not found"
+      });
+    });
+
+    writeStream.on("error", () => {
+      res.status(500).json({
+        message: "Failed to copy file"
+      });
+    });
+  } catch {
+    return res.status(404).json({
+      message: "Source file not found"
     });
   }
 });
