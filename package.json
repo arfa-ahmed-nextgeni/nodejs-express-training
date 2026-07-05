@@ -26,7 +26,8 @@
     "dev:jwt": "tsx 29-jwt/src/index.ts",
     "dev:refresh-token": "tsx 30-refresh-token/src/index.ts",
     "dev:cookies": "tsx 31-cookies/src/index.ts",
-    "dev:env": "tsx 32-environment-variables/src/index.ts"
+    "dev:env": "tsx 32-environment-variables/src/index.ts",
+    "dev:file-upload": "tsx 33-file-upload/src/index.ts"
   },
   "repository": {
     "type": "git",
@@ -49,6 +50,7 @@
     "helmet": "^8.2.0",
     "jsonwebtoken": "^9.0.3",
     "morgan": "^1.11.0",
+    "multer": "^2.2.0",
     "zod": "^4.4.3"
   },
   "devDependencies": {
@@ -58,6 +60,7 @@
     "@types/express": "^5.0.6",
     "@types/jsonwebtoken": "^9.0.10",
     "@types/morgan": "^1.9.10",
+    "@types/multer": "^2.2.0",
     "@types/node": "^26.0.0",
     "tsx": "^4.22.4",
     "typescript": "^6.0.3"
