@@ -30,7 +30,8 @@
     "dev:file-upload": "tsx 33-file-upload/src/index.ts",
     "dev:fs": "tsx 34-file-system-path-os/src/index.ts",
     "dev:streams": "tsx 35-streams-buffer/src/index.ts",
-    "dev:chunks": "tsx 36-large-file-chunks/src/index.ts"
+    "dev:chunks": "tsx 36-large-file-chunks/src/index.ts",
+    "dev:router": "tsx 37-express-router/src/index.ts"
   },
   "repository": {
     "type": "git",
