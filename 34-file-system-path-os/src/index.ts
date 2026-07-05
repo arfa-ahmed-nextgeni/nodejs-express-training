@@ -35,10 +35,10 @@ app.get("/read-file", async (_req, res) => {
   try {
     const content = await fs.readFile(filePath, "utf-8");
     res.json({
-      "content": "Hello from Node.js file system"
+      content
     });
   } catch (error) {
-    res.status(500).json({
+    res.status(404).json({
       "message": "File not found"
     });
   }
