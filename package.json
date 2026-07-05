@@ -25,7 +25,8 @@
     "dev:hashing": "tsx 28-password-hashing/src/index.ts",
     "dev:jwt": "tsx 29-jwt/src/index.ts",
     "dev:refresh-token": "tsx 30-refresh-token/src/index.ts",
-    "dev:cookies": "tsx 31-cookies/src/index.ts"
+    "dev:cookies": "tsx 31-cookies/src/index.ts",
+    "dev:env": "tsx 32-environment-variables/src/index.ts"
   },
   "repository": {
     "type": "git",
@@ -43,6 +44,7 @@
     "bcrypt": "^6.0.0",
     "cookie-parser": "^1.4.7",
     "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
     "express": "^5.2.1",
     "helmet": "^8.2.0",
     "jsonwebtoken": "^9.0.3",
