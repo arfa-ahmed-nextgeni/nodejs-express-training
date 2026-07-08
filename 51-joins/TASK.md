@@ -6,26 +6,52 @@ Practice writing simple SQL JOIN examples using related tables.
 
 ## Online Tool
 
-You can test these queries in:
+Use this online tool for practice:
 
 ```txt
-https://runsql.com
+https://runsql.com/r
 ```
 
-## Database Setup
+## Database Schema
 
-Before starting this task, run these files first:
+First, paste this DBML schema into runsql.com:
 
-```txt
-database/schema.sql
-database/seed.sql
+```dbml
+// Use DBML to define your database structure
+// Docs: https://dbml.dbdiagram.io/docs
+
+Table users {
+  id integer [primary key]
+  name varchar(50)
+  email varchar(100)
+}
+
+Table orders {
+  id integer [primary key]
+  user_id integer
+  total integer
+  status varchar(30)
+}
+
+Table products {
+  id integer [primary key]
+  name varchar(100)
+  price integer
+}
+
+Table order_items {
+  id integer [primary key]
+  order_id integer
+  product_id integer
+  quantity integer
+}
+
+Ref: orders.user_id > users.id
+Ref: order_items.order_id > orders.id
+Ref: order_items.product_id > products.id
 ```
 
-Run `schema.sql` first to create the tables.
-
-Run `seed.sql` after that to add sample data.
-
-## Database Tables
+## Tables Used
 
 This task uses these tables:
 
@@ -34,36 +60,6 @@ users
 orders
 products
 order_items
-```
-
-## Database Schema Overview
-
-```txt
-Table users {
-  id integer [primary key]
-  name varchar(50)
-  email varchar(100)
-}
-
-Table products {
-  id integer [primary key]
-  name varchar(100)
-  price decimal(10, 2)
-}
-
-Table orders {
-  id integer [primary key]
-  user_id integer [foreign key -> users.id]
-  total decimal(10, 2)
-  status varchar(30)
-}
-
-Table order_items {
-  id integer [primary key]
-  order_id integer [foreign key -> orders.id]
-  product_id integer [foreign key -> products.id]
-  quantity integer
-}
 ```
 
 ## Instructions
@@ -86,7 +82,7 @@ Write examples for:
 3. Get order items with product names
 ```
 
-## Example Relation Hints
+## Relation Hints
 
 Use these relations:
 
