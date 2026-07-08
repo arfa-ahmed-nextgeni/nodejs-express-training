@@ -4,6 +4,68 @@
 
 Practice writing simple SQL JOIN examples using related tables.
 
+## Online Tool
+
+You can test these queries in:
+
+```txt
+https://runsql.com
+```
+
+## Database Setup
+
+Before starting this task, run these files first:
+
+```txt
+database/schema.sql
+database/seed.sql
+```
+
+Run `schema.sql` first to create the tables.
+
+Run `seed.sql` after that to add sample data.
+
+## Database Tables
+
+This task uses these tables:
+
+```txt
+users
+orders
+products
+order_items
+```
+
+## Database Schema Overview
+
+```txt
+Table users {
+  id integer [primary key]
+  name varchar(50)
+  email varchar(100)
+}
+
+Table products {
+  id integer [primary key]
+  name varchar(100)
+  price decimal(10, 2)
+}
+
+Table orders {
+  id integer [primary key]
+  user_id integer [foreign key -> users.id]
+  total decimal(10, 2)
+  status varchar(30)
+}
+
+Table order_items {
+  id integer [primary key]
+  order_id integer [foreign key -> orders.id]
+  product_id integer [foreign key -> products.id]
+  quantity integer
+}
+```
+
 ## Instructions
 
 Create a file named:
@@ -13,17 +75,6 @@ join-queries.md
 ```
 
 Inside this file, write SQL examples for joins.
-
-## Example Tables
-
-Use these example tables:
-
-```txt
-users
-orders
-products
-order_items
-```
 
 ## Required Practice
 
