@@ -2,7 +2,7 @@
 SELECT UPPER(name) AS uppercase_name FROM users
 
 2. Lowercase User Emails
-SELECT LOWER(email) AS lowercase_name FROM users
+SELECT LOWER(email) AS lowercase_email FROM users
 
 3. User Name Length
 SELECT name, LENGTH(name) AS name_length FROM users 
