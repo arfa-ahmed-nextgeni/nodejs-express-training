@@ -17,4 +17,4 @@ SELECT COUNT(email) AS users_with_email FROM users;
 SELECT COUNT(DISTINCT city) AS total_cities FROM users;
 
 7. Count completed orders whose total is greater than or equal to 250.
-SELECT COUNT(*) AS completed_order FROM orders WHERE total >= 250;
+SELECT COUNT(*) AS completed_order FROM orders WHERE total >= 250 AND status = 'completed';
